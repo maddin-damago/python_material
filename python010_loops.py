@@ -23,3 +23,35 @@ for bezirk in stadtbezirke:
 for i in range(1,21):
     if i % 4 == 0:
         print(i)
+
+# while loop
+
+ort = "Berlin"
+counter = 0
+
+while ort == "Berlin":
+    print(counter)
+    counter += 1
+
+    if counter > 10:
+        ort = "Leipzig"
+
+elIdx = 0
+while elIdx < len(stadtbezirke):
+    print(stadtbezirke[elIdx], "ist ein Bezirk in München")
+    elIdx += 1
+print("Schleife beendet")
+
+# rückwärts ausgeben
+elIdx = len(stadtbezirke) - 1
+while elIdx >= 0:
+    print(stadtbezirke[elIdx], "ist ein Bezirk in München")
+    elIdx -= 1
+print("Schleife beendet")
+
+# rückwärts ausgeben, danach ist die Liste aber leer
+while len(stadtbezirke):
+    name = stadtbezirke.pop()
+    print(name, "ist ein Bezirk in München")
+
+# stadtbezirke.reverse() dreht die Liste auch um
