@@ -1,6 +1,3 @@
-import math
-
-
 orte = ["Amsterdam", "Paris", "Rom", "Paris", "Brüssel", "Paris"]
 
 # Amsterdamm vorhanden
