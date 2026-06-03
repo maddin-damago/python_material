@@ -6,11 +6,10 @@ def is_valid_password(password):
     has_upper = any(c.isupper() for c in password)  #prüft ob Großbuchstabe
     if has_length and has_digit and has_letter and has_upper:
         return True
+    print(__name__)
     return False
  
-
-
-
+## oop exkurs
 class Auto:
 
     def __init__(self, name):
