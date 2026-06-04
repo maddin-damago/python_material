@@ -9,7 +9,7 @@
 
 # Beispiel von w3schools:
 
-def binarySearch(arr, targetVal):
+def binarySearch(arr: list[int], targetVal: int):
   left = 0 # erster index
   right = len(arr) - 1 # letzter index
 

@@ -1,4 +1,4 @@
-def is_valid_password(password):
+def is_valid_password(password: str):
     #Return True if password is at least 8 characters and contains a digit.
     has_length = len(password) >= 8
     has_digit = any(c.isdigit() for c in password)  #any() prüft hier ob für irgendein Zeichen in password ein True für isdigit() herauskommt
@@ -12,7 +12,7 @@ def is_valid_password(password):
 ## oop exkurs
 class Auto:
 
-    def __init__(self, name):
+    def __init__(self, name: str):
         self.name = name
 
     def fahre_los(self):

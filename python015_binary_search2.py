@@ -4,7 +4,7 @@ zahl = 105
 daten.sort()
 print("Suche nach", zahl, "in sortierter Liste", daten)
 
-def findeZahl(z, arr):
+def findeZahl(z: int, arr: list[int]):
     links = 0
     rechts = len(arr) - 1
 
@@ -27,7 +27,7 @@ else:
     print("Zahl nicht in der Liste gefunden")
 
 
-def findeZahlRekursiv(z, arr):
+def findeZahlRekursiv(z: int, arr: list[int]) -> int:
     links = 0
     rechts = len(arr)
     print(arr)
@@ -42,6 +42,7 @@ def findeZahlRekursiv(z, arr):
         return findeZahlRekursiv(z, arr[links : positionMitte])
     elif z > arr[positionMitte]: # Zahl größer als Zahl an der Mitte; in der linken Hälfte weitersuchen
         return findeZahlRekursiv(z, arr[positionMitte + 1 : rechts])
+    return -1
 
 res = findeZahlRekursiv(zahl, daten)
 print(res)

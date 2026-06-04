@@ -1,4 +1,12 @@
-einkaufszettel = {
+from typing import TypedDict
+
+class Einkauf(TypedDict):
+    artikel: str
+    anzahl: int
+    einzelpreis: float
+
+
+einkaufszettel: dict[int, Einkauf] = {
     1: {"artikel": "Milch", "anzahl": 2, "einzelpreis": 1.00},
     2: {"artikel": "Butter", "anzahl": 2, "einzelpreis": 2.50},
     3: {"artikel": "Eier", "anzahl": 1, "einzelpreis": 3.00},

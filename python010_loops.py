@@ -1,4 +1,4 @@
-import time
+# import time
 
 stadtbezirke = ["Schwabing", "Solln", "Sendling", "Moosach"]
 
