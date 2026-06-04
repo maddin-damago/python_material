@@ -1,4 +1,12 @@
-addressDictionary = {
+from typing import TypedDict
+
+# 1. Define the "Interface"
+class Addresse(TypedDict):
+    plz: int
+    name: str
+
+
+addressDictionary: dict[int, Addresse] = {
     1: {"plz": 10969, "name": "Kreuzberg"},
     2: {"plz": 12051, "name": "Neukölln"},
     3: {"plz": 12555, "name": "Köpenick"},
@@ -15,9 +23,9 @@ plzDictionary = {
 
 # Dictionary durchloopen, "eintrag" ist in diesem Fall der "Key" (1, 2, 3, 4) des Dictionary Eintrags, in diesem befindet sich je Key
 # ein weiteres Dictionary -> key mit ["keyname"] ansteuern
-for eintrag in addressDictionary:
-    addressDictionary[eintrag]["einwohnerzahl"] = 123456
-    print(addressDictionary[eintrag]["plz"], addressDictionary[eintrag]["name"], addressDictionary[eintrag]["einwohnerzahl"])
+# for eintrag in addressDictionary:
+#     addressDictionary[eintrag]["einwohnerzahl"] = 123456
+#     print(addressDictionary[eintrag]["plz"], addressDictionary[eintrag]["name"], addressDictionary[eintrag]["einwohnerzahl"])
 
 for plz in plzDictionary:
     print(plz)
@@ -34,5 +42,5 @@ print(addressDictionary.values())
 print(len(addressDictionary))
 
 # dictionary inhalt löschen
-plzDictionary.clear();
+plzDictionary.clear()
 print(plzDictionary)

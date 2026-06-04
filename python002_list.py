@@ -67,7 +67,9 @@ postleitzahlen = [10179, 12555, 12051, 13089, 12309, 12305]
 postleitzahlen.sort()
 print(postleitzahlen)
 
-addressbuch = [
+
+
+addressbuch: list[list[int | str]] = [
     [10179, "Charlottenburg"],
     [12555, "Köpenick"],
     [12051, "Neukölln"],

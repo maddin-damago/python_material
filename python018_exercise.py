@@ -1,3 +1,4 @@
+from typing import TypedDict, Final
 """
 = Aufgabe 4: Bahnticket =
 
@@ -18,7 +19,17 @@ Reise: 800km pro Tag
 * wieviele Tage ist der Reisende unterwegs
 """
 
-strecken = [
+class Strecke(TypedDict):
+    strecke: str
+    laenge_in_km: int
+    zugbezeichnung: str
+
+class TicketInfo(TypedDict):
+    tage_unterwegs: int
+    gesamt_preis_km: float
+    guenstigstes_ticket: str
+
+strecken: list[Strecke] = [
     {"strecke": "montpellier-lyon", "laenge_in_km": 303, "zugbezeichnung": "TGV"},
     {"strecke": "lyon-strasbourg", "laenge_in_km": 495, "zugbezeichnung": "TGV"},
     {"strecke": "strasbourg-ffm", "laenge_in_km": 218, "zugbezeichnung": "TGV"},
@@ -26,12 +37,12 @@ strecken = [
     {"strecke": "leipzig-berlin", "laenge_in_km": 180, "zugbezeichnung": "RE"},
 ]
 
-MAX_KM_PRO_TAG = 800
-PREIS_PRO_KM = 0.25
-BAHNCARD_ERMAESSIGUNG = 0.5
-INTERRAIL_TICKET_PREIS = 283
+MAX_KM_PRO_TAG: Final[int] = 800
+PREIS_PRO_KM: Final[float] = 0.25
+BAHNCARD_ERMAESSIGUNG: Final[float] = 0.5
+INTERRAIL_TICKET_PREIS: Final[int] = 283
 
-def berechne_guenstigstes_ticket(strecken):
+def berechne_guenstigstes_ticket(strecken: list[Strecke]) -> TicketInfo:
     tages_gesamt = 0
     tage_unterwegs = 0
     gesamt_preis_km = 0

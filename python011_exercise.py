@@ -38,7 +38,7 @@ for ort in orteDictionary:
 
 orte = ["Amsterdam", "Paris", "Rom", "Paris", "Brüssel", "Paris"]
 
-orteDict = {}
+orteDict: dict[str, int] = {}
 
 for ort in orte:
     if ort in orteDict:
@@ -48,6 +48,6 @@ for ort in orte:
 
 print(orteDict)
 
-highestCount = max(orteDict, key=orteDict.get)
+highestCount: str = max(orteDict, key=lambda k: orteDict[k])
 
 print("Ort, der am häufigsten vorkommt: ", highestCount)
