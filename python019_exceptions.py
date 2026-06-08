@@ -1,3 +1,7 @@
+import random
+import tempfile
+
+
 def levelCheck(level: int) -> str | AssertionError:
     if level < 1:
         raise AssertionError("Ungültiges Level")
@@ -5,7 +9,6 @@ def levelCheck(level: int) -> str | AssertionError:
 
 # print(levelCheck(-2))
 
-import random
 
 daten = [1, 2, 3] * 5
 try:
@@ -38,7 +41,6 @@ try:
 except:
     print("Fehler beim Lesen der Datei")
 
-import tempfile
 
 with tempfile.NamedTemporaryFile(delete=False) as tf:
     print("Ausgabe in Datei:", tf.name)
