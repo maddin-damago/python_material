@@ -54,54 +54,54 @@ e) Benutze eine for-Schleife, um alle Elemente der Liste nacheinander auszugeben
    Lichtenberg
 """
 
-# stadtteile = ["Kreuzberg", "Lichtenberg", "Wilmersdorf", "Tegel"]
+stadtteile = ["Kreuzberg", "Lichtenberg", "Wilmersdorf", "Tegel"]
 
 # a)
 
-# counter = len(stadtteile)
-# index = 0
+counter = len(stadtteile)
+index = 0
 
-# while counter > 0:
-#     print(stadtteile[index])
-#     counter -= 1
-#     index += 1
-#     print(counter, index)
+while counter > 0:
+    print(stadtteile[index])
+    counter -= 1
+    index += 1
+    print(counter, index)
 
-# # destruktiv
-# while stadtteile:
-#     print(stadtteile.pop(0))
+# destruktiv
+while stadtteile:
+    print(stadtteile.pop(0))
 
 # b)
-# stadtteile = ["Kreuzberg", "Lichtenberg", "Wilmersdorf", "Tegel"]
+stadtteile = ["Kreuzberg", "Lichtenberg", "Wilmersdorf", "Tegel"]
 
-# counter = len(stadtteile)
+counter = len(stadtteile)
 
-# while counter > 0:
-#     print(stadtteile[counter-1])
-#     counter -= 1
+while counter > 0:
+    print(stadtteile[counter-1])
+    counter -= 1
 
-# # destruktiv
-# while stadtteile:
-#     print(stadtteile.pop())
+# destruktiv
+while stadtteile:
+    print(stadtteile.pop())
 
 # c)
-# stadtteile = ["Kreuzberg", "Lichtenberg", "Wilmersdorf", "Tegel"]
+stadtteile = ["Kreuzberg", "Lichtenberg", "Wilmersdorf", "Tegel"]
 
-# counter = len(stadtteile)
-# index = 0
+counter = len(stadtteile)
+index = 0
 
-# while counter > 0:
-#     if stadtteile[index] != "Wilmersdorf":
-#         print(stadtteile[index])
-#     counter -= 1
-#     index += 1
-#     print(counter, index)
+while counter > 0:
+    if stadtteile[index] != "Wilmersdorf":
+        print(stadtteile[index])
+    counter -= 1
+    index += 1
+    print(counter, index)
 
-# # destruktiv
-# while stadtteile:
-#     if stadtteile[index] == "Wilmersdorf":
-#         stadtteile.pop(0)
-#     print(stadtteile.pop(0))
+# destruktiv
+while stadtteile:
+    if stadtteile[index] == "Wilmersdorf":
+        stadtteile.pop(0)
+    print(stadtteile.pop(0))
 
 # d)
 stadtteile = ["Kreuzberg", "Lichtenberg", "Wilmersdorf", "Tegel"]

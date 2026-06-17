@@ -222,7 +222,7 @@ print(fairteilterEinkauf(einkauf))
 
 
 def fairteilterEinkaufFlattened(einkaufsZettel: list[EinkaufItem]):
-    maxKapaEinkaufFritchen: list[EinkaufItem] = []
+    maxKapaEinkaufFritzchen: list[EinkaufItem] = []
     maxKapaEinkaufOnkelHelmut: list[EinkaufItem] = []
 
     flattenedEinkaufsZettel: list[EinkaufItem] = []
@@ -246,7 +246,7 @@ def fairteilterEinkaufFlattened(einkaufsZettel: list[EinkaufItem]):
     for item in sortiertAbsteigend:
         if summeFritchen + item["gewichtInKg"] <= MAX_TRAGE_KAPA:
             if summeFritchen <= summeOnkelHelmut:
-                maxKapaEinkaufFritchen.append(item)
+                maxKapaEinkaufFritzchen.append(item)
                 summeFritchen += item["gewichtInKg"]
             else:
                 maxKapaEinkaufOnkelHelmut.append(item)
@@ -258,16 +258,16 @@ def fairteilterEinkaufFlattened(einkaufsZettel: list[EinkaufItem]):
                     maxKapaEinkaufOnkelHelmut.append(item)
                     summeOnkelHelmut += item["gewichtInKg"]
                 else:
-                    maxKapaEinkaufFritchen.append(item)
+                    maxKapaEinkaufFritzchen.append(item)
                     summeFritchen += item["gewichtInKg"]
 
     print("Gewicht Fritchen:", summeFritchen)
     print("Gewicht Onkel Helmut:", summeOnkelHelmut)
 
-    return {"fritchen": maxKapaEinkaufFritchen, "onkelHelmut": maxKapaEinkaufOnkelHelmut}
+    return {"fritzchen": maxKapaEinkaufFritzchen, "onkelHelmut": maxKapaEinkaufOnkelHelmut}
 
 
 amFairsten = fairteilterEinkaufFlattened(einkauf)
 
-print("Fritzchen:", amFairsten["fritchen"])
+print("Fritzchen:", amFairsten["fritzchen"])
 print("Onkel Helmut:", amFairsten["onkelHelmut"])
